@@ -30,3 +30,8 @@ create trigger trg_processa_reserva
 	before insert or update on reservas
 	for each row
 	execute function fn_processa_reserva();
+
+
+INSERT INTO reservas (numero_quarto, data_checkin, data_checkout, valor_diaria)
+ VALUES (205, '2026-11-01', '2026-11-06', 200.00);
+SELECT * FROM reservas; 
