@@ -20,5 +20,5 @@ BEFORE INSERT OR UPDATE ON estoque
 FOR EACH ROW
 EXECUTE FUNCTION fn_valida_estoque_minimo();
 
-INSERT INTO estoque (nome_iten, quantidade) VALUES ('Teclado Mecânico', 10); -- Sucesso
+INSERT INTO estoque (nome_item, quantidade) VALUES ('Teclado Mecânico', 10); -- Sucesso
 UPDATE estoque SET quantidade = -2 WHERE id = 1;
