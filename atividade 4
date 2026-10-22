@@ -35,3 +35,9 @@ create trigger trg_soft_delete_cliente
 before delete on clientes
 for each row
 execute function fn_soft_delete_cliente();
+
+
+INSERT INTO clientes (nome, email) VALUES ('joao', 'joao@email.com');
+DELETE FROM clientes WHERE id = 1;
+SELECT * FROM clientes;
+SELECT * FROM clientes_deletados_log; 
